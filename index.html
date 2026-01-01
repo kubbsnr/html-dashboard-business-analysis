@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İş Analisti Portföyüm</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        
+        body {
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+            width: 15rem;
+        }
+
+        .sidebar-heading {
+            padding: 1.5rem 1.25rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #212529; 
+            color: #fff;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 15px 25px;
+            font-size: 15px;
+        }
+
+        .list-group-item.active {
+            background-color: #0d6efd;
+            font-weight: 600;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+      </style>
+      </head>
+      <body>
+
+    <div class="d-flex" id="wrapper">
+        
+        <div class="bg-dark text-white border-end" id="sidebar-wrapper">
+            <div class="sidebar-heading">BA Portföy</div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark active"><i class="fas fa-chart-pie me-2"></i>Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"><i class="fas fa-project-diagram me-2"></i>Vaka Analizleri</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"><i class="fas fa-file-contract me-2"></i>Gereksinimler</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"><i class="fas fa-certificate me-2"></i>Sertifikalar</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark"><i class="fas fa-user-tie me-2"></i>Hakkımda</a>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            
+        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+        <div class="container-fluid">
+                <button class="btn btn-outline-primary" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+                </button>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                <li class="nav-item"><a class="nav-link fw-bold" href="#">Kübra (Junior BA)</a></li>
+                </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-4">
+                
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1 class="h3 text-dark">İş Analisti Performans Paneli</h1>
+                    <button class="btn btn-primary btn-sm"><i class="fas fa-download me-2"></i>CV İndir</button>
+                </div>
+
+                <div class="row mb-4">
+                <div class="col-md-3">
+                <div class="card text-white bg-primary mb-3 shadow-sm h-100">
+                <div class="card-body">
+                <h5 class="card-title fs-6"><i class="fas fa-project-diagram me-2"></i>Analiz Edilen Süreç</h5>
+                    <p class="card-text display-6 fw-bold">14</p>
+                </div>
+                    </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-success mb-3 shadow-sm h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6"><i class="fas fa-clock me-2"></i>Zaman Tasarrufu</h5>
+                                <p class="card-text display-6 fw-bold">%45</p>
+                                <small>Otomasyon sonrası</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-warning mb-3 shadow-sm h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6"><i class="fas fa-file-alt me-2"></i>Yazılan Doküman</h5>
+                                <p class="card-text display-6 fw-bold">32</p>
+                                <small>BRD, FRD, User Stories</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-white bg-danger mb-3 shadow-sm h-100">
+                            <div class="card-body">
+                                <h5 class="card-title fs-6"><i class="fas fa-bug me-2"></i>Önlenen Hata</h5>
+                                <p class="card-text display-6 fw-bold">18</p>
+                                <small>UAT Öncesi Tespit</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-lg-8">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header py-3 bg-white">
+                                <h6 class="m-0 font-weight-bold text-primary">Vaka Analizi: Manuel vs Otomasyon Süreleri</h6>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="barChart"></canvas> </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header py-3 bg-white">
+                                <h6 class="m-0 font-weight-bold text-primary">Proje Efor Dağılımı</h6>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="pieChart"></canvas> </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-header py-3 bg-white">
+                        <h6 class="m-0 font-weight-bold text-primary">Son Analiz Raporları & ROI Etkisi</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Proje Adı</th>
+                                        <th>Kullanılan Teknik</th>
+                                        <th>Durum</th>
+                                        <th>İşletmeye Etkisi (ROI)</th>
+                                        <th>Tarih</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Depo Stok Yönetimi</strong></td>
+                                        <td>SWOT & Gap Analizi</td>
+                                        <td><span class="badge bg-success">Tamamlandı</span></td>
+                                        <td class="text-success"><i class="fas fa-arrow-up"></i> %25 Maliyet Düşüşü</td>
+                                        <td>20.12.2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Müşteri Onboarding (CRM)</strong></td>
+                                        <td>Use Case Modelleme</td>
+                                        <td><span class="badge bg-primary">Test (UAT)</span></td>
+                                        <td class="text-primary">Müşteri kaybını önleme</td>
+                                        <td>15.12.2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Mobil Ödeme Entegrasyonu</strong></td>
+                                        <td>User Story Mapping</td>
+                                        <td><span class="badge bg-warning text-dark">Geliştirme</span></td>
+                                        <td>Hızlı ödeme akışı</td>
+                                        <td>10.12.2025</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Eski Muhasebe Geçişi</strong></td>
+                                        <td>Veri Göçü Analizi</td>
+                                        <td><span class="badge bg-secondary">Planlanıyor</span></td>
+                                        <td>Veri tutarlılığı</td>
+                                        <td>01.01.2026</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div> </div> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', event => {
+            const sidebarToggle = document.body.querySelector('#sidebarToggle');
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    document.body.querySelector('#wrapper').classList.toggle('toggled');
+                });
+            }
+        });
+
+        var ctxBar = document.getElementById('barChart').getContext('2d');
+        var myBarChart = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ['Veri Girişi', 'Rapor Oluşturma', 'Onay Süreci', 'Müşteri Kaydı', 'Fatura Kesimi'],
+                datasets: [{
+                    label: 'Eski Sistem (Dakika)',
+                    data: [15, 25, 45, 10, 20],
+                    backgroundColor: 'rgba(231, 74, 59, 0.7)',
+                    borderColor: 'rgba(231, 74, 59, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Önerilen Sistem (Dakika)',
+                    data: [2, 5, 10, 3, 5],
+                    backgroundColor: 'rgba(28, 200, 138, 0.7)',
+                    borderColor: 'rgba(28, 200, 138, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        var ctxPie = document.getElementById('pieChart').getContext('2d');
+        var myPieChart = new Chart(ctxPie, {
+            type: 'doughnut',
+            data: {
+                labels: ['Gereksinim Analizi', 'Dokümantasyon', 'Paydaş Toplantıları', 'UAT Testleri', 'Eğitim'],
+                datasets: [{
+                    data: [35, 25, 20, 15, 5],
+                    backgroundColor: ['#4e73df', '#36b9cc', '#f6c23e', '#1cc88a', '#858796'],
+                    hoverOffset: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
